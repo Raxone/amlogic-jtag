@@ -1,0 +1,33 @@
+openocd -f amlogic_A55_jlink_EL3_MMU_OFF.cfg 
+Open On-Chip Debugger 0.12.0+dev-02458-g7e508338e (2026-04-24-07:46)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Using low physical CoreSight mapping
+Info : J-Link OB-STM32F103 V1 compiled Apr  1 2025 10:12:53
+Info : Hardware version: 1.00
+Info : VTarget = 3.300 V
+Info : clock speed 2000 kHz
+Info : JTAG tap: amlogic.tap tap/device found: 0x6ba00477 (mfg: 0x23b (ARM Ltd), part: 0xba00, ver: 0x6)
+Info : amlogic.cpu.0: hardware has 6 breakpoints, 4 watchpoints
+Info : [amlogic.cpu.0] external reset detected
+Info : [amlogic.cpu.0] Examination succeed
+Info : [amlogic.cpu.0] starting gdb server on 3333
+Info : Listening on port 3333 for gdb connections
+Info : amlogic.cpu.0 socket 0 cluster 0 core 0 thread 0 multi core
+amlogic.cpu.0 halted in AArch64 state due to debug-request, current mode: EL2H
+cpsr: 0x800003c9 pc: 0xd7eefe7c
+MMU: enabled, D-Cache: enabled, I-Cache: enabled
+amlogic.cpu.0 halted in AArch64 state due to single-step, current mode: EL3H
+cpsr: 0x800003cd pc: 0x5127c00
+MMU: enabled, D-Cache: enabled, I-Cache: enabled
+amlogic.cpu.0 halted in AArch64 state due to debug-request, current mode: EL3H
+cpsr: 0x800003cd pc: 0x51257b8
+MMU: disabled, D-Cache: disabled, I-Cache: disabled
+mmu_on
+Info : Listening on port 6666 for tcl connections
+Info : Listening on port 4444 for telnet connections
+Info : accepting 'gdb' connection on tcp/3333
+Info : dropped 'gdb' connection
+Info : accepting 'gdb' connection on tcp/3333
+

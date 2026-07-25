@@ -1,0 +1,35 @@
+# -----------------------------
+# Cortex-M3 + J-Link GDB script
+# -----------------------------
+
+set architecture armv7e-m
+set arm fallback-mode thumb
+
+set pagination off
+set confirm off
+set print pretty on
+set disassemble-next-line on
+
+target extended-remote localhost:3333
+
+monitor halt
+
+echo \n=== REGS ===\n
+info registers
+
+echo \n=== PC ===\n
+x/16i $pc
+
+# jtag password entry
+#b *0x10001b58
+
+# before read_cfg_7c
+#b *0x10001bb0
+
+# before read_jtag_hash
+#b *0x10001bdc
+
+# memcmp call
+#b *0x10001be6
+
+echo \n=== READY ===\n

@@ -1,0 +1,310 @@
+SM1:BL:511f6b:81ca2f;FEAT:A0F83982:20282000;POC:F;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
+bl2_stage_init 0x01
+bl2_stage_init 0x81
+hw id: 0x0001 - pwm id 0x00
+bl2_stage_init 0xc0
+bl2_stage_init 0x02
+
+L0:00000300
+L1:00000703
+L2:00008067
+L3:15000020
+S1:00000000
+B2:20282000
+B1:a0f83982
+
+TE: 426617
+
+BL2 Built : 20:29:41, Jun 18 2019. g12a ga659aac - luan.yuan@droid15-sz
+
+Board ID = 1
+Set cpu clk to 24M
+Set clk81 to 24M
+Use GP1_pll as DSU clk.
+DSU clk: 1200 Mhz
+CPU clk: 1200 MHz
+Set clk81 to 166.6M
+eMMC boot @ 0
+sw8 s
+DDR driver_vesion: LPDDR4_PHY_V_0_1_15 build time: Jun 18 2019 20:29:37
+board id: 1
+Load FIP HDR from eMMC, src: 0x00010200, des: 0xfffd0000, size: 0x00004000, part: 0
+fw parse done
+Load ddrfw from eMMC, src: 0x00060200, des: 0xfffd0000, size: 0x0000c000, part: 0
+Load ddrfw from eMMC, src: 0x00038200, des: 0xfffd0000, size: 0x00004000, part: 0
+PIEI prepare done
+fastboot data load
+00000000
+emmc switch 1 ok
+ddr saved addr:00016000
+Load ddr parameter from eMMC, src: 0x02c00000, des: 0xfffd0000, size: 0x00001000, part: 0
+00000000
+emmc switch 0 ok
+fastboot data verify
+verify result: 255
+Cfg max: 1, cur: 1. Board id: 255. Force loop cfg
+DDR3 probe
+ddr clk to 792MHz
+Load ddrfw from eMMC, src: 0x0002c200, des: 0xfffd0000, size: 0x0000c000, part: 0
+
+dmc_version 0001
+Check phy result
+INFO : End of initialization
+INFO : End of read enable training
+INFO : End of fine write leveling
+INFO : End of read dq deskew training
+INFO : End of MPR read delay center optimization
+INFO : End of Write leveling coarse delay
+INFO : End of write delay center optimization
+INFO : End of read delay center optimization
+INFO : End of max read latency training
+INFO : Training has run successfully!
+1D training succeed
+aml_ddr_fw_vesion: LPDDR4_PHY_V_0_1_17 build time: Jan 12 2021 15:01:24
+DDR cs0 size: 4096MB
+DDR cs1 size: 0MB
+DMC_DDR_CTRL: 0000002dDDR size: 3928MB
+cs0 DataBus test pass
+cs0 AddrBus test pass
+
+non-sec scramble use zero key
+ddr scramble enabled
+
+100bdlr_step_size ps== 412
+result report
+boot times 0Enable ddr reg access
+00000000
+emmc switch 3 ok
+BL2: rpmb counter: 0x0000027e
+00000000
+emmc switch 0 ok
+Load FIP HDR from eMMC, src: 0x00010200, des: 0x01700000, size: 0x00004000, part: 0
+Load BL3X from eMMC, src: 0x00078200, des: 0x01768000, size: 0x00128000, part: 0
+bl2z: ptr: 05129330, size: 00001e40
+0.0;M3 CHK:0;cm4_sp_mode 0
+MVN_1=0x00000000
+MVN_2=0x00000000
+[Image: JTAG g12a_v1.1.3389-92241b5 2019-07-02 17:22:49]
+OPS=0x10
+ring efuse init
+2b 0c 10 00 01 19 34 00 00 06 33 33 56 30 52 50 
+[0.015919 Inits done]
+secure task start!
+high task start!
+low task start!
+run into bl31
+NOTICE:  BL31: v1.3(release):4fc40b1
+NOTICE:  BL31: Built : 15:57:33, May 22 2019
+NOTICE:  BL31: G12A normal boot!
+ERROR:   Error initializing runtime service opteed_fast
+
+
+U-Boot 2015.01.SMC_JTAG R@xOne-g569c56b-dirty (Jul 19 2026 - 19:36:42)
+
+DRAM:  3.8 GiB
+Relocation Offset is: d6e80000
+spi_post_bind(spifc): req_seq = 0
+register usb cfg[0][1] = 00000000d7f48410
+NAND:  MMC:   aml_priv->desc_buf = 0x00000000d3e70a70
+aml_priv->desc_buf = 0x00000000d3e72db0
+SDIO Port B: 0, SDIO Port C: 1
+co-phase 0x2, tx-dly 0, clock 400000
+co-phase 0x2, tx-dly 0, clock 400000
+co-phase 0x2, tx-dly 0, clock 400000
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+co-phase 0x2, tx-dly 0, clock 400000
+co-phase 0x2, tx-dly 0, clock 40000000
+aml_sd_retry_refix[983]:delay = 0x0,gadjust =0x162000
+[mmc_startup] mmc refix success
+init_part() 297: PART_TYPE_AML
+[mmc_init] mmc init success
+      Amlogic multi-dtb tool
+      GZIP format, decompress...
+      Multi dtb detected
+checkhw: loc_name is sm1_ac213_4g
+      Multi dtb tool version: v2 .
+      Support 4 dtbs.
+        aml_dt soc: sm1 platform: ac213 variant: 4g
+        dtb 0 soc: g12a   plat: u212   vari: 2g
+        dtb 1 soc: g12a   plat: u212   vari: 4g
+        dtb 2 soc: sm1   plat: ac213   vari: 2g
+        dtb 3 soc: sm1   plat: ac213   vari: 4g
+      Find match dtb: 3
+start dts,buffer=00000000d3e75620,dt_addr=00000000d3e75620
+get_partition_from_dts() 91: ret 0
+      Amlogic multi-dtb tool
+      Single dtb detected
+parts: 17
+00:      logo	0000000000800000 1
+01:  recovery	0000000001800000 1
+02:      misc	0000000000800000 1
+03:      dtbo	0000000000800000 1
+04:  cri_data	0000000000800000 2
+05:     param	0000000001000000 2
+06:      boot	0000000001000000 1
+set has_boot_slot = 0
+07:       rsv	0000000001000000 1
+08:  metadata	0000000001000000 1
+09:    vbmeta	0000000000200000 1
+10:       tee	0000000002000000 1
+11:    vendor	0000000046000000 1
+12:       odm	0000000008000000 1
+13:    system	0000000050000000 1
+14:   product	0000000008000000 1
+15:     cache	0000000046000000 2
+16:      data	ffffffffffffffff 4
+init_part() 297: PART_TYPE_AML
+eMMC/TSD partition table have been checked OK!
+crc32_s:0x1577dad == storage crc_pattern:0x1577dad!!!
+crc32_s:0xee152b83 == storage crc_pattern:0xee152b83!!!
+crc32_s:0x79f50f07 == storage crc_pattern:0x79f50f07!!!
+mmc env offset: 0x4d400000 
+In:    serial
+Out:   serial
+Err:   serial
+reboot_mode=cold_boot
+[store]To run cmd[emmc dtb_read 0x1000000 0x40000]
+_verify_dtb_checksum()-3406: calc d6f3d423, store d6f3d423
+_verify_dtb_checksum()-3406: calc d6f3d423, store d6f3d423
+dtb_read()-3623: total valid 2
+update_old_dtb()-3604: do nothing
+      Amlogic multi-dtb tool
+      GZIP format, decompress...
+      Multi dtb detected
+checkhw: loc_name is sm1_ac213_4g
+      Multi dtb tool version: v2 .
+      Support 4 dtbs.
+        aml_dt soc: sm1 platform: ac213 variant: 4g
+        dtb 0 soc: g12a   plat: u212   vari: 2g
+        dtb 1 soc: g12a   plat: u212   vari: 4g
+        dtb 2 soc: sm1   plat: ac213   vari: 2g
+        dtb 3 soc: sm1   plat: ac213   vari: 4g
+      Find match dtb: 3
+vpu: clk_level in dts: 7
+vpu: vpu_power_on
+vpu: set clk: 666667000Hz, readback: 666666667Hz(0x100)
+vpu: vpu_module_init_config
+vpp: vpp_init
+vpp: vpp osd2 matrix rgb2yuv..............
+cvbs: cpuid:0x2b
+Net:   dwmac.ff3f0000
+Warning: dwmac.ff3f0000 MAC addresses is not from dtb
+MACADDR:02:00:00:34:19:01(from chipid)
+
+CONFIG_AVB2: null 
+Start read misc partition datas!
+info->magic = 
+info->version_major = 1
+info->version_minor = 0
+info->slots[0].priority = 15
+info->slots[0].tries_remaining = 7
+info->slots[0].successful_boot = 0
+info->slots[1].priority = 14
+info->slots[1].tries_remaining = 7
+info->slots[1].successful_boot = 0
+info->crc32 = -1075449479
+active slot = 0
+wipe_data=successful
+wipe_cache=successful
+upgrade_step=0
+reboot_mode:::: cold_boot
+hpd_state=0
+edid preferred_mode is <NULL>[0]
+hdr mode is 0
+dv  mode is ver:0  len: 0
+hdr10+ mode is 0
+[OSD]load fb addr from dts:/meson-fb
+[OSD]load fb addr from dts:/fb
+[OSD]set initrd_high: 0xdf800000
+[OSD]fb_addr for logo: 0xdf800000
+[OSD]load fb addr from dts:/meson-fb
+[OSD]load fb addr from dts:/fb
+[OSD]fb_addr for logo: 0xdf800000
+[OSD]VPP_OFIFO_SIZE:0xfff01fff
+[CANVAS]canvas init
+[CANVAS]addr=0xdf800000 width=3840, height=2160
+vpp: vpp_matrix_update: 2
+cvbs performance type = 9, table = 0
+cvbs_config_hdmipll_g12a
+cvbs_set_vid2_clk
+vpp: sdr_mode = 2
+vpp: Rx hdr_info.hdr_sup_eotf_smpte_st_2084 = 0
+gpio: pin GPIOAO_3 (gpio 3) value is 1
+Command: bcb uboot-command 
+Start read misc partition datas!
+BCB hasn't any datas,exit!
+Hit Enter or space or Ctrl+C key to stop autoboot -- :  0 
+
+ddr_set_t_p==0xd7f830a0
+pll tsensor avg: 0x1ed3, u_efuse: 0x802b
+temp1: 29
+ddr tsensor avg: 0x1ee1, u_efuse: 0x1
+temp2: 30
+device cool done
+CONFIG_SYSTEM_AS_ROOT: systemroot 
+system_mode: 1
+Start read misc partition datas!
+info->magic = 
+info->version_major = 1
+info->version_minor = 0
+info->slots[0].priority = 15
+info->slots[0].tries_remaining = 7
+info->slots[0].successful_boot = 0
+info->slots[1].priority = 14
+info->slots[1].tries_remaining = 7
+info->slots[1].successful_boot = 0
+info->crc32 = -1075449479
+active slot = 0
+CONFIG_AVB2: null 
+active_slot: normal
+Err imgread(L337):Fmt unsupported!genFmt 0x0 != 0x3
+InUsbBurn
+noSof
+sof timeout, reset usb phy tuning
+card out
+[MSG]mmcinfo failed!
+card out
+(Re)start USB...
+USB0:   USB3.0 XHCI init start
+Register 3000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.10
+scanning bus 0 for devices... 1 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+** Bad device usb 0 **
+** Bad device usb 0 **
+Start read misc partition datas!
+info->magic = 
+info->version_major = 1
+info->version_minor = 0
+info->slots[0].priority = 15
+info->slots[0].tries_remaining = 7
+info->slots[0].successful_boot = 0
+info->slots[1].priority = 14
+info->slots[1].tries_remaining = 7
+info->slots[1].successful_boot = 0
+info->crc32 = -1075449479
+active slot = 0
+active_slot: normal
+Err imgread(L337):Fmt unsupported!genFmt 0x0 != 0x3
+g12a_u212_v1#jtagon
+invalid argument count!
+jtagon - enable jtag
+
+Usage:
+jtagon jtagon [apao|apee|scpao|scpee|m4ao|m4ee] [0|1]
+ apao  - A53 AO JTAG
+ apee  - A53 EE JTAG
+ scpao - M3 AO JTAG
+ scpee - M3 EE JTAG
+ m4ao  - M4 AO JTAG
+ m4ee  - M4 EE JTAG
+ [0|1] - GXM cluster selection
+g12a_u212_v1#jtagon scpao
+Enable JTAG sel=0
+WARNING! efuse bits is disabled
+Enable M3 JTAG
+g12a_u212_v1#
+
+

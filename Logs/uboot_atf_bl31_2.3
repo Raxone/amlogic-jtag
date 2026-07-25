@@ -1,0 +1,607 @@
+SM1:BL:511f6b:81ca2f;FEAT:A0F83982:20282000;POC:F;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
+bl2_stage_init 0x01
+bl2_stage_init 0x81
+hw id: 0x0001 - pwm id 0x00
+bl2_stage_init 0xc0
+bl2_stage_init 0x02
+
+L0:00000300
+L1:00000703
+L2:00008067
+L3:15000020
+S1:00000000
+B2:20282000
+B1:a0f83982
+
+TE: 412721
+
+BL2 Built : 20:29:41, Jun 18 2019. g12a ga659aac - luan.yuan@droid15-sz
+
+Board ID = 1
+Set cpu clk to 24M
+Set clk81 to 24M
+Use GP1_pll as DSU clk.
+DSU clk: 1200 Mhz
+CPU clk: 1200 MHz
+Set clk81 to 166.6M
+eMMC boot @ 0
+sw8 s
+DDR driver_vesion: LPDDR4_PHY_V_0_1_15 build time: Jun 18 2019 20:29:37
+board id: 1
+Load FIP HDR from eMMC, src: 0x00010200, des: 0xfffd0000, size: 0x00004000, part: 0
+fw parse done
+Load ddrfw from eMMC, src: 0x00060200, des: 0xfffd0000, size: 0x0000c000, part: 0
+Load ddrfw from eMMC, src: 0x00038200, des: 0xfffd0000, size: 0x00004000, part: 0
+PIEI prepare done
+fastboot data load
+00000000
+emmc switch 1 ok
+ddr saved addr:00016000
+Load ddr parameter from eMMC, src: 0x02c00000, des: 0xfffd0000, size: 0x00001000, part: 0
+00000000
+emmc switch 0 ok
+fastboot data verify
+verify result: 255
+Cfg max: 1, cur: 1. Board id: 255. Force loop cfg
+DDR3 probe
+ddr clk to 792MHz
+Load ddrfw from eMMC, src: 0x0002c200, des: 0xfffd0000, size: 0x0000c000, part: 0
+
+dmc_version 0001
+Check phy result
+INFO : End of initialization
+INFO : End of read enable training
+INFO : End of fine write leveling
+INFO : End of read dq deskew training
+INFO : End of MPR read delay center optimization
+INFO : End of Write leveling coarse delay
+INFO : End of write delay center optimization
+INFO : End of read delay center optimization
+INFO : End of max read latency training
+INFO : Training has run successfully!
+1D training succeed
+aml_ddr_fw_vesion: LPDDR4_PHY_V_0_1_17 build time: Jan 12 2021 15:01:24
+DDR cs0 size: 4096MB
+DDR cs1 size: 0MB
+DMC_DDR_CTRL: 0000002dDDR size: 3928MB
+cs0 DataBus test pass
+cs0 AddrBus test pass
+
+non-sec scramble use zero key
+ddr scramble enabled
+
+100bdlr_step_size ps== 423
+result report
+boot times 0Enable ddr reg access
+00000000
+emmc switch 3 ok
+BL2: rpmb counter: 0x0000027e
+00000000
+emmc switch 0 ok
+Load FIP HDR from eMMC, src: 0x00010200, des: 0x01700000, size: 0x00004000, part: 0
+Load BL3X from eMMC, src: 0x00078200, des: 0x01768000, size: 0x00108000, part: 0
+NO BL2z!
+0.0;M3 CHK:0;cm4_sp_mode 0
+MVN_1=0x00000000
+MVN_2=0x00000000
+[Image: JTAG g12a_v1.1.3389-92241b5 2019-07-02 17:22:49]
+OPS=0x10
+ring efuse init
+2b 0c 10 00 01 19 34 00 00 06 33 33 56 30 52 50 
+[0.015919 Inits done]
+secure task start!
+high task start!
+low task start!
+�NOTICE:  BL31: v2.3():v2.3-dirty
+NOTICE:  BL31: Built : 16:06:09, Jul 25 2026
+NOTICE:  BL31: R@xOne
+INFO:    ARM GICv2 driver initialized
+INFO:    BL31: Initializing runtime services
+INFO:    BL31: cortex_a55: CPU workaround for 1221012 was applied
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x1000000
+INFO:    SPSR = 0x3c9
+
+
+U-Boot 2015.01.SMC_JTAG R@xOne-g569c56b-dirty (Jul 25 2026 - 16:06:01)
+
+DRAM:  3.8 GiB
+Relocation Offset is: d6e80000
+spi_post_bind(spifc): req_seq = 0
+register usb cfg[0][1] = 00000000d7f48410
+NAND:  MMC:   aml_priv->desc_buf = 0x00000000d3e70a70
+aml_priv->desc_buf = 0x00000000d3e72db0
+SDIO Port B: 0, SDIO Port C: 1
+co-phase 0x2, tx-dly 0, clock 400000
+co-phase 0x2, tx-dly 0, clock 400000
+co-phase 0x2, tx-dly 0, clock 400000
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+co-phase 0x2, tx-dly 0, clock 400000
+co-phase 0x2, tx-dly 0, clock 40000000
+aml_sd_retry_refix[983]:delay = 0x0,gadjust =0x162000
+[mmc_startup] mmc refix success
+init_part() 297: PART_TYPE_AML
+[mmc_init] mmc init success
+NOTICE:  
+NOTICE:  ========================================
+NOTICE:  SMC ENTRY
+NOTICE:  ========================================
+NOTICE:  FID = 0x82000028
+NOTICE:  X1  = 0x0000000000000001
+NOTICE:  X2  = 0x0000000000000002
+NOTICE:  X3  = 0x0000000000000001
+NOTICE:  X4  = 0x00000000d3e5f999
+NOTICE:  COOKIE = 0
+NOTICE:  HANDLE = 0x510e280
+NOTICE:  ORIG X0 = 0x0000000082000028
+NOTICE:  ORIG X1 = 0x0000000000000001
+NOTICE:  ORIG X2 = 0x0000000000000002
+NOTICE:  ORIG X3 = 0x0000000000000001
+NOTICE:  ORIG X4 = 0x00000000d3e5f999
+NOTICE:  ORIG X5 = 0x0000000000000000
+NOTICE:  ORIG X6 = 0x00000000ffffffd0
+NOTICE:  ORIG X7 = 0x0000000000000020
+NOTICE:  FLAGS = 0x0000000000000021
+NOTICE:  ========================================
+      Amlogic multi-dtb tool
+      GZIP format, decompress...
+      Multi dtb detected
+checkhw: loc_name is sm1_ac213_4g
+      Multi dtb tool version: v2 .
+      Support 4 dtbs.
+        aml_dt soc: sm1 platform: ac213 variant: 4g
+        dtb 0 soc: g12a   plat: u212   vari: 2g
+        dtb 1 soc: g12a   plat: u212   vari: 4g
+        dtb 2 soc: sm1   plat: ac213   vari: 2g
+        dtb 3 soc: sm1   plat: ac213   vari: 4g
+      Find match dtb: 3
+start dts,buffer=00000000d3e75620,dt_addr=00000000d3e75620
+get_partition_from_dts() 91: ret 0
+      Amlogic multi-dtb tool
+      Single dtb detected
+parts: 17
+00:      logo	0000000000800000 1
+01:  recovery	0000000001800000 1
+02:      misc	0000000000800000 1
+03:      dtbo	0000000000800000 1
+04:  cri_data	0000000000800000 2
+05:     param	0000000001000000 2
+06:      boot	0000000001000000 1
+set has_boot_slot = 0
+07:       rsv	0000000001000000 1
+08:  metadata	0000000001000000 1
+09:    vbmeta	0000000000200000 1
+10:       tee	0000000002000000 1
+11:    vendor	0000000046000000 1
+12:       odm	0000000008000000 1
+13:    system	0000000050000000 1
+14:   product	0000000008000000 1
+15:     cache	0000000046000000 2
+16:      data	ffffffffffffffff 4
+init_part() 297: PART_TYPE_AML
+eMMC/TSD partition table have been checked OK!
+crc32_s:0x1577dad == storage crc_pattern:0x1577dad!!!
+crc32_s:0xee152b83 == storage crc_pattern:0xee152b83!!!
+crc32_s:0x79f50f07 == storage crc_pattern:0x79f50f07!!!
+mmc env offset: 0x4d400000 
+In:    serial
+Out:   serial
+Err:   serial
+reboot_mode=cold_boot
+[store]To run cmd[emmc dtb_read 0x1000000 0x40000]
+_verify_dtb_checksum()-3406: calc ffd72d5, store ffd72d5
+_verify_dtb_checksum()-3406: calc ffd72d5, store ffd72d5
+dtb_read()-3623: total valid 2
+update_old_dtb()-3604: do nothing
+NOTICE:  
+NOTICE:  ========================================
+NOTICE:  SMC ENTRY
+NOTICE:  ========================================
+NOTICE:  FID = 0x820000ff
+NOTICE:  X1  = 0x0000000000000040
+NOTICE:  X2  = 0x0000000001000000
+NOTICE:  X3  = 0x000000000003fe00
+NOTICE:  X4  = 0x0000000000000000
+NOTICE:  COOKIE = 0
+NOTICE:  HANDLE = 0x510e280
+NOTICE:  ORIG X0 = 0x00000000820000ff
+NOTICE:  ORIG X1 = 0x0000000000000040
+NOTICE:  ORIG X2 = 0x0000000001000000
+NOTICE:  ORIG X3 = 0x000000000003fe00
+NOTICE:  ORIG X4 = 0x0000000000000000
+NOTICE:  ORIG X5 = 0x000000000003fe00
+NOTICE:  ORIG X6 = 0x0000000001000000
+NOTICE:  ORIG X7 = 0x0000000000000040
+NOTICE:  FLAGS = 0x0000000000000041
+NOTICE:  ========================================
+NOTICE:  
+NOTICE:  ========================================
+NOTICE:  SMC ENTRY
+NOTICE:  ========================================
+NOTICE:  FID = 0x820000ff
+NOTICE:  X1  = 0x0000000000000100
+NOTICE:  X2  = 0x0000000001080000
+NOTICE:  X3  = 0x0000000000000500
+NOTICE:  X4  = 0x0000000000000007
+NOTICE:  COOKIE = 0
+NOTICE:  HANDLE = 0x510e280
+NOTICE:  ORIG X0 = 0x00000000820000ff
+NOTICE:  ORIG X1 = 0x0000000000000100
+NOTICE:  ORIG X2 = 0x0000000001080000
+NOTICE:  ORIG X3 = 0x0000000000000500
+NOTICE:  ORIG X4 = 0x0000000000000007
+NOTICE:  ORIG X5 = 0x0000000000000500
+NOTICE:  ORIG X6 = 0x0000000001080000
+NOTICE:  ORIG X7 = 0x0000000000000100
+NOTICE:  FLAGS = 0x0000000000000101
+NOTICE:  ========================================
+      Amlogic multi-dtb tool
+      GZIP format, decompress...
+      Multi dtb detected
+checkhw: loc_name is sm1_ac213_4g
+      Multi dtb tool version: v2 .
+      Support 4 dtbs.
+        aml_dt soc: sm1 platform: ac213 variant: 4g
+        dtb 0 soc: g12a   plat: u212   vari: 2g
+        dtb 1 soc: g12a   plat: u212   vari: 4g
+        dtb 2 soc: sm1   plat: ac213   vari: 2g
+        dtb 3 soc: sm1   plat: ac213   vari: 4g
+      Find match dtb: 3
+vpu: clk_level in dts: 7
+vpu: vpu_power_on
+vpu: set clk: 666667000Hz, readback: 666666667Hz(0x100)
+vpu: vpu_module_init_config
+vpp: vpp_init
+vpp: vpp osd2 matrix rgb2yuv..............
+cvbs: cpuid:0x2b
+Net:   dwmac.ff3f0000
+Warning: dwmac.ff3f0000 MAC addresses is not from dtb
+NOTICE:  
+NOTICE:  ========================================
+NOTICE:  SMC ENTRY
+NOTICE:  ========================================
+NOTICE:  FID = 0x82000021
+NOTICE:  X1  = 0x0000000000000010
+NOTICE:  X2  = 0x0000000000000001
+NOTICE:  X3  = 0x0000000000000000
+NOTICE:  X4  = 0x0000000000000008
+NOTICE:  COOKIE = 0
+NOTICE:  HANDLE = 0x510e280
+NOTICE:  ORIG X0 = 0x0000000082000021
+NOTICE:  ORIG X1 = 0x0000000000000010
+NOTICE:  ORIG X2 = 0x0000000000000001
+NOTICE:  ORIG X3 = 0x0000000000000000
+NOTICE:  ORIG X4 = 0x0000000000000008
+NOTICE:  ORIG X5 = 0x0000000000000031
+NOTICE:  ORIG X6 = 0x00000000d7f16df8
+NOTICE:  ORIG X7 = 0x0000000000000044
+NOTICE:  FLAGS = 0x0000000000000045
+NOTICE:  ========================================
+NOTICE:  
+NOTICE:  ========================================
+NOTICE:  SMC ENTRY
+NOTICE:  ========================================
+NOTICE:  FID = 0x82000044
+NOTICE:  X1  = 0x0000000000000002
+NOTICE:  X2  = 0x0000000000000001
+NOTICE:  X3  = 0x0000000000000000
+NOTICE:  X4  = 0x0000000000000008
+NOTICE:  COOKIE = 0
+NOTICE:  HANDLE = 0x510e280
+NOTICE:  ORIG X0 = 0x0000000082000044
+NOTICE:  ORIG X1 = 0x0000000000000002
+NOTICE:  ORIG X2 = 0x0000000000000001
+NOTICE:  ORIG X3 = 0x0000000000000000
+NOTICE:  ORIG X4 = 0x0000000000000008
+NOTICE:  ORIG X5 = 0x0000000000000031
+NOTICE:  ORIG X6 = 0x00000000d7f16df8
+NOTICE:  ORIG X7 = 0x0000000000000044
+NOTICE:  FLAGS = 0x0000000000000045
+NOTICE:  ========================================
+MACADDR:02:00:00:34:19:01(from chipid)
+
+CONFIG_AVB2: null 
+Start read misc partition datas!
+info->magic = 
+info->version_major = 1
+info->version_minor = 0
+info->slots[0].priority = 15
+info->slots[0].tries_remaining = 7
+info->slots[0].successful_boot = 0
+info->slots[1].priority = 14
+info->slots[1].tries_remaining = 7
+info->slots[1].successful_boot = 0
+info->crc32 = -1075449479
+active slot = 0
+wipe_data=successful
+wipe_cache=successful
+upgrade_step=0
+reboot_mode:::: cold_boot
+hpd_state=0
+edid preferred_mode is <NULL>[0]
+hdr mode is 0
+dv  mode is ver:0  len: 0
+hdr10+ mode is 0
+[OSD]load fb addr from dts:/meson-fb
+[OSD]load fb addr from dts:/fb
+[OSD]set initrd_high: 0xdf800000
+[OSD]fb_addr for logo: 0xdf800000
+[OSD]load fb addr from dts:/meson-fb
+[OSD]load fb addr from dts:/fb
+[OSD]fb_addr for logo: 0xdf800000
+[OSD]VPP_OFIFO_SIZE:0xfff01fff
+[CANVAS]canvas init
+[CANVAS]addr=0xdf800000 width=3840, height=2160
+vpp: vpp_matrix_update: 2
+cvbs performance type = 9, table = 0
+cvbs_config_hdmipll_g12a
+cvbs_set_vid2_clk
+vpp: sdr_mode = 2
+vpp: Rx hdr_info.hdr_sup_eotf_smpte_st_2084 = 0
+gpio: pin GPIOAO_3 (gpio 3) value is 1
+Command: bcb uboot-command 
+Start read misc partition datas!
+BCB hasn't any datas,exit!
+Hit Enter or space or Ctrl+C key to stop autoboot -- :  0 
+
+ddr_set_t_p==0xd7f830a0
+pll tsensor avg: 0x208e, u_efuse: 0x802b
+temp1: 42
+ddr tsensor avg: 0x209d, u_efuse: 0x1
+temp2: 43
+device cool done
+CONFIG_SYSTEM_AS_ROOT: systemroot 
+system_mode: 1
+Start read misc partition datas!
+info->magic = 
+info->version_major = 1
+info->version_minor = 0
+info->slots[0].priority = 15
+info->slots[0].tries_remaining = 7
+info->slots[0].successful_boot = 0
+info->slots[1].priority = 14
+info->slots[1].tries_remaining = 7
+info->slots[1].successful_boot = 0
+info->crc32 = -1075449479
+active slot = 0
+CONFIG_AVB2: null 
+active_slot: normal
+NOTICE:  
+NOTICE:  ========================================
+NOTICE:  SMC ENTRY
+NOTICE:  ========================================
+NOTICE:  FID = 0x820000ff
+NOTICE:  X1  = 0x0000000000000100
+NOTICE:  X2  = 0x0000000001080000
+NOTICE:  X3  = 0x0000000000000500
+NOTICE:  X4  = 0x0000000000000007
+NOTICE:  COOKIE = 0
+NOTICE:  HANDLE = 0x510e280
+NOTICE:  ORIG X0 = 0x00000000820000ff
+NOTICE:  ORIG X1 = 0x0000000000000100
+NOTICE:  ORIG X2 = 0x0000000001080000
+NOTICE:  ORIG X3 = 0x0000000000000500
+NOTICE:  ORIG X4 = 0x0000000000000007
+NOTICE:  ORIG X5 = 0x0000000000000500
+NOTICE:  ORIG X6 = 0x0000000001080000
+NOTICE:  ORIG X7 = 0x0000000000000100
+NOTICE:  FLAGS = 0x0000000000000101
+NOTICE:  ========================================
+Err imgread(L337):Fmt unsupported!genFmt 0x0 != 0x3
+InUsbBurn
+noSof
+sof timeout, reset usb phy tuning
+card out
+[MSG]mmcinfo failed!
+card out
+(Re)start USB...
+USB0:   USB3.0 XHCI init start
+Register 3000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.10
+scanning bus 0 for devices... 1 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+** Bad device usb 0 **
+** Bad device usb 0 **
+Start read misc partition datas!
+info->magic = 
+info->version_major = 1
+info->version_minor = 0
+info->slots[0].priority = 15
+info->slots[0].tries_remaining = 7
+info->slots[0].successful_boot = 0
+info->slots[1].priority = 14
+info->slots[1].tries_remaining = 7
+info->slots[1].successful_boot = 0
+info->crc32 = -1075449479
+active slot = 0
+active_slot: normal
+NOTICE:  
+NOTICE:  ========================================
+NOTICE:  SMC ENTRY
+NOTICE:  ========================================
+NOTICE:  FID = 0x820000ff
+NOTICE:  X1  = 0x0000000000000100
+NOTICE:  X2  = 0x0000000001080000
+NOTICE:  X3  = 0x0000000000000500
+NOTICE:  X4  = 0x0000000000000007
+NOTICE:  COOKIE = 0
+NOTICE:  HANDLE = 0x510e280
+NOTICE:  ORIG X0 = 0x00000000820000ff
+NOTICE:  ORIG X1 = 0x0000000000000100
+NOTICE:  ORIG X2 = 0x0000000001080000
+NOTICE:  ORIG X3 = 0x0000000000000500
+NOTICE:  ORIG X4 = 0x0000000000000007
+NOTICE:  ORIG X5 = 0x0000000000000500
+NOTICE:  ORIG X6 = 0x0000000001080000
+NOTICE:  ORIG X7 = 0x0000000000000100
+NOTICE:  FLAGS = 0x0000000000000101
+NOTICE:  ========================================
+Err imgread(L337):Fmt unsupported!genFmt 0x0 != 0x3
+g12a_u212_v1#help
+?       - alias for 'help'
+aml_sysrecovery- Burning with amlogic format package from partition sysrecovery
+amldump - Dump secure memory via AML BL31 SMC
+amlmmc  - AMLMMC sub system
+amlread - Read secure memory (64-bit)
+amlwrite- Write secure memory (64-bit)
+autoscr - run script from memory
+avb     - avb
+base    - print or set address offset
+bcb     - bcb
+boot_cooling- cpu temp-system
+booti   - boot arm64 Linux Image image from memory
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+cbusreg - cbus register read/write
+chpart  - change active partition
+clkmsr  - Amlogic measure clock
+cmp     - memory compare
+cp      - memory copy
+crc32   - checksum calculation
+cvbs    - CVBS sub-system
+dcache  - enable or disable data cache
+ddr_auto_fast_boot_check- ddr_fastboot_config cmd arg1 arg2 arg3...
+ddr_auto_scan_drv- ddr_test_cmd cmd arg1 arg2 arg3...
+ddr_auto_test_window- ddr_test_cmd cmd arg1 arg2 arg3...
+ddr_cpu_test- ddr_test_cmd cmd arg1 arg2 arg3...
+ddr_fast_boot- ddr_fastboot_config cmd arg1 arg2 arg3...
+ddr_g12_offset_data- ddr_g12_offset_data  1 0  0 0  1 3
+ddr_g12_override_data- ddr_g12_override_data  1 0  0 0  1 3
+ddr_spec_test- DDR test function
+ddr_test_cmd- ddr_test_cmd cmd arg1 arg2 arg3...
+ddr_test_copy- ddr_test_copy function
+ddrtest - DDR test function
+defenv_reserv- reserve some specified envs after defaulting env
+dhcp    - boot image via network using DHCP/TFTP protocol
+dtimg   - manipulate dtb/dtbo Android image
+echo    - echo args to console
+efuse   - efuse commands
+efuse_user- efuse user space read write ops
+emmc    - EMMC sub system
+env     - environment handling commands
+ethloop - ethloop	- loopback test using ethernet test package
+
+exit    - exit script
+false   - do nothing, unsuccessfully
+fastboot- use USB Fastboot protocol
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file's size
+fdt     - flattened device tree utility commands
+forceupdate- forceupdate
+g12_d2pll- g12_d2pll 1300  1 0x10 0
+get_avb_mode- get_avb_mode
+get_rebootmode- get reboot mode
+get_system_as_root_mode- get_system_as_root_mode
+get_valid_slot- get_valid_slot
+go      - start application at address 'addr'
+gpio    - query and control gpio pins
+gpt     - GUID Partition Table
+guid    - GUID - generate Globally Unique Identifier based on random UUID
+hdmitx  - HDMITX sub-system 20190123
+help    - print command description/usage
+i2c     - I2C sub-system
+icache  - enable or disable instruction cache
+img_osd - image osd sub-system
+imgread - Read the image from internal flash with actual size
+itest   - return true/false on integer compare
+jtagoff - disable jtag
+jtagon  - enable jtag
+ld_bl40 - load bl40 and run bl40.bin from bl33
+loadb   - load binary file over serial line (kermit mode)
+loadx   - load binary file over serial line (xmodem mode)
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+macreg  - ethernet mac register read/write/dump
+md      - memory display
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mtdparts- define flash/nand partitions
+mw      - memory write (fill)
+mwm     - mw mask function
+nand    - NAND sub-system
+nboot   - boot from NAND device
+nm      - memory modify (constant address)
+open_scp_log- print SCP messgage
+osd     - osd sub-system
+phyreg  - ethernet phy register read/write/dump
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+query   - SoC query commands
+rarpboot- boot image via network using RARP/TFTP protocol
+read_temp- cpu temp-system
+reboot  - set reboot mode and reboot system
+reset   - Perform RESET of the CPU
+ringmsr - Amlogic measure ring
+rpmb_state- RPMB sub-system
+rsvmem  - reserve memory
+run     - run commands in an environment variable
+saradc  - saradc sub-system
+saradc_12bit- saradc sub-system
+saveenv - save environment variables to persistent storage
+sdc_burn- Burning with amlogic format package in sdmmc 
+sdc_update- Burning a partition with image file in sdmmc card
+set_active_slot- set_active_slot
+set_trim_base- cpu temp-system
+set_usb_boot- set usb boot mode
+setenv  - set environment variables
+sf      - SPI flash sub-system
+showvar - print local hushshell variables
+sleep   - delay execution for some time
+smc     - call an SMC (Secure Monitor Call)
+smc_mem - Secure memory access via BL31 vendor SMC (0x8200004A)
+sspi    - SPI utility command
+store   - STORE sub-system
+systemoff- system off 
+tee_log_level- update tee log level
+temp_triming- cpu temp-system
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+true    - do nothing, successfully
+ui      - ui sub-system
+unpackimg- un pack logo image into pictures
+update  - Enter v2 usbburning mode
+usb     - USB sub-system
+usb_burn- Burning with amlogic format package in usb 
+usb_update- Burning a partition with image file in usb host
+usbboot - boot from USB device
+uuid    - UUID - generate random Universally Unique Identifier
+version - print monitor, compiler and linker version
+viu_probe- enable viu probe in no secure chip
+vout    - VOUT sub-system
+vout2   - VOUT2 sub-system
+vpp     - vpp sub-system
+vpu     - vpu sub-system
+write_trim- cpu temp-system
+write_version- cpu temp-system
+g12a_u212_v1#smc_mem 
+smc_mem - Secure memory access via BL31 vendor SMC (0x8200004A)
+
+Usage:
+smc_mem rd <addr>
+        Read secure 32-bit register
+wr <addr> <value>
+        Write secure 32-bit register
+dump <addr> <len>
+        Dump secure memory
+fill <addr> <value> <len>
+        Fill secure memory
+mailbox
+        Dump MHU mailbox registers
+payload
+        Dump SCPI payload buffer
+payloadwr <word> <value>
+        Write SCPI payload word
+payloadclr
+        Clear SCPI payload buffer
+scpi <opcode> [size]
+        Send SCPI command via MAILBOX3
+jtag <state> <select>
+        Send SCPI JTAG_SET_STATE (0xC0)
+g12a_u212_v1#
+
+

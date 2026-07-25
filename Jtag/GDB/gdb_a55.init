@@ -1,0 +1,78 @@
+set pagination off
+set confirm off
+set print pretty on
+set disassemble-next-line on
+set print symbol-filename on
+#file bl31.elf
+target extended-remote :3333
+
+#monitor reset halt
+
+
+
+#EL2H to EL3H
+#set $pc = 0xd7ebf75c
+#stepi
+
+#MMU_OFF
+#shell sleep 0.1
+##Stock bl31 DDR_18
+#set $pc = 0x51238bc
+##Build Bl31
+#set $pc = 0x51059ec
+#stepi
+
+#monitor reset halt
+
+# --- Enter BootROM directly ---
+#set $pc = 0xffff0164
+#stepi
+#stepi
+#stepi
+
+
+#set $sp = 0xfffe3800
+
+# --- Stop Watchdog ---
+# Disable watchdog control
+#set {unsigned int}0xffd0f0d0 = 0x0
+
+# Clear/feed watchdog counter
+#set {unsigned int}0xffd0f0dc = 0x0
+#hb *0xffff34a0
+# Optional BootROM breakpoint
+#hb *0xffff34a0
+#continue
+#set $pc = 0xffff8250
+#stepi
+#stepi
+#stepi
+#hb *0xffff7c50
+#set $pc = 0xffff8250
+#continue
+
+#Run update password password/password.bin that stop on 0xffff7c50
+
+#set $x0 = 0x82000040
+#set $x1 = 2
+#set $pc = 0xd7f00000
+#hb *0x511886c
+#continue
+
+
+define hook-stop
+
+    printf "\n==== REGISTERS ====\n"
+
+    info registers \
+        x0 x1 x2 x3 x4 x5 x6 x7 \
+        x8 x9 x10 x11 x12 x13 x14 x15 \
+        x16 x17 x18 x19 x20 x21 x22 x23 \
+        x24 x25 x26 x27 x28 x29 x30 \
+        sp pc cpsr \
+        ELR_EL3 ESR_EL3 SPSR_EL3
+
+    printf "===================\n"
+
+    x/10i $pc
+end

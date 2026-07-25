@@ -1,0 +1,81 @@
+gdb-multiarch -q -x gdb_M3.init 
+The target architecture is set to "armv7e-m".
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x10000c74 in ?? ()
+=> 0x10000c74:	e7fd    	b.n	0x10000c72
+
+=== REGS ===
+r0             0x0                 0
+r1             0x0                 0
+r2             0x3b00000           61865984
+r3             0xff80023c          -8388036
+r4             0x0                 0
+r5             0x0                 0
+r6             0x0                 0
+r7             0x0                 0
+r8             0x0                 0
+r9             0x0                 0
+r10            0x0                 0
+r11            0x0                 0
+r12            0x0                 0
+sp             0x100085f8          0x100085f8
+lr             0x10000c73          268438643
+pc             0x10000c74          0x10000c74
+xpsr           0x1000000           16777216
+msp            0x10008400          0x10008400
+psp            0x100085f8          0x100085f8
+primask        0x0                 0
+basepri        0x0                 0
+faultmask      0x0                 0
+control        0x2                 2
+
+=== PC ===
+=> 0x10000c74:	b.n	0x10000c72
+   0x10000c76:	movs	r0, r0
+   0x10000c78:	cmp	r3, #0
+   0x10000c7a:	bne.n	0x10000cca
+   0x10000c7c:	cmp	r2, #0
+   0x10000c7e:	beq.n	0x10000cb6
+   0x10000c80:	cmp	r1, #0
+   0x10000c82:	beq.n	0x10000cb8
+   0x10000c84:	push	{r4, r5, r6, r7, lr}
+   0x10000c86:	movs	r5, #1
+   0x10000c88:	adds	r7, r2, #0
+   0x10000c8a:	bmi.n	0x10000c9a
+   0x10000c8c:	cmp	r1, r7
+   0x10000c8e:	bcc.n	0x10000c9a
+   0x10000c90:	lsls	r5, r5, #1
+   0x10000c92:	lsls	r7, r7, #1
+
+=== READY ===
+(gdb) info reg
+r0             0x0                 0
+r1             0x0                 0
+r2             0x3b00000           61865984
+r3             0xff80023c          -8388036
+r4             0x0                 0
+r5             0x0                 0
+r6             0x0                 0
+r7             0x0                 0
+r8             0x0                 0
+r9             0x0                 0
+r10            0x0                 0
+r11            0x0                 0
+r12            0x0                 0
+sp             0x100085f8          0x100085f8
+lr             0x10000c73          268438643
+pc             0x10000c74          0x10000c74
+xpsr           0x1000000           16777216
+msp            0x10008400          0x10008400
+psp            0x100085f8          0x100085f8
+primask        0x0                 0
+basepri        0x0                 0
+faultmask      0x0                 0
+control        0x2                 2
+(gdb) monitor reset
+JTAG tap: m3_s905x3.cpu tap/device found: 0x4ba00477 (mfg: 0x23b (ARM Ltd), part: 0xba00, ver: 0x4)
+(gdb) monitor halt
+[m3_s905x3.cpu] halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x10000c74 psp: 0x100085f8
+

@@ -1,0 +1,155 @@
+gdb-multiarch -q -x gdb_debug_A55_bootrom.init 
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x00000000051257b8 in ?? ()
+=> 0x00000000051257b8:	17ffffff	b	0x51257b4
+0x00000000ffff0168 in ?? ()
+=> 0x00000000ffff0168:	58000702	ldr	x2, 0xffff0248
+0x00000000ffff016c in ?? ()
+=> 0x00000000ffff016c:	580007a0	ldr	x0, 0xffff0260
+0x00000000ffff0170 in ?? ()
+=> 0x00000000ffff0170:	cb010043	sub	x3, x2, x1
+Hardware assisted breakpoint 1 at 0xffff34a0
+
+Breakpoint 1, 0x00000000ffff34a0 in ?? ()
+=> 0x00000000ffff34a0:	d29e1a01	mov	x1, #0xf0d0                	// #61648
+0x00000000ffff8254 in ?? ()
+=> 0x00000000ffff8254:	910003fd	mov	x29, sp
+0x00000000ffff8258 in ?? ()
+=> 0x00000000ffff8258:	d2800300	mov	x0, #0x18                  	// #24
+0x00000000ffff825c in ?? ()
+=> 0x00000000ffff825c:	a90153f3	stp	x19, x20, [sp, #16]
+Hardware assisted breakpoint 2 at 0xffff7c50
+^C
+Program received signal SIGINT, Interrupt.
+0x00000000ffff6b18 in ?? ()
+=> 0x00000000ffff6b18:	4b010000	sub	w0, w0, w1
+(gdb) info registers 
+x0             0x1226116f          304484719
+x1             0x11f09c75          300981365
+x2             0x4c4b40            5000000
+x3             0x0                 0
+x4             0x0                 0
+x5             0xfffe3690          4294850192
+x6             0xfffe3690          4294850192
+x7             0xd7f4bd18          3623140632
+x8             0x1                 1
+x9             0x8                 8
+x10            0xf                 15
+x11            0xd7f197b8          3622934456
+x12            0x0                 0
+x13            0xe2c4              58052
+x14            0xe2c0              58048
+x15            0xe2bc              58044
+x16            0xe2b8              58040
+x17            0xe370              58224
+x18            0xd3e6fe28          3555130920
+x19            0xfffe3860          4294850656
+x20            0xfffe3000          4294848512
+x21            0x2                 2
+x22            0xfffe37e8          4294850536
+x23            0x1                 1
+x24            0x1                 1
+x25            0x13                19
+x26            0xbd89819           198744089
+x27            0x1                 1
+x28            0x0                 0
+x29            0xfffe3700          4294850304
+x30            0xffff6b10          4294929168
+sp             0xfffe36c0          0xfffe36c0
+pc             0xffff6b18          0xffff6b18
+cpsr           0x400003cd          [ SP=1 EL=3 nRW=0 F I A D Z ]
+fpsr           0x0                 0
+fpcr           0x0                 0
+ELR_EL1        0x0                 0x0
+ESR_EL1        0x0                 0
+SPSR_EL1       0x0                 0
+ELR_EL2        0x0                 0x0
+ESR_EL2        0xffcee780          4291749760
+SPSR_EL2       0x8214581c          2182371356
+ELR_EL3        0x100               0x100
+ESR_EL3        0x2000000           33554432
+SPSR_EL3       0x800003cd          2147484621
+(gdb) x/40i 0xffff6b18
+=> 0xffff6b18:	sub	w0, w0, w1
+   0xffff6b1c:	cmp	w0, w2
+   0xffff6b20:	b.hi	0xffff6b44  // b.pmore
+   0xffff6b24:	b	0xffff6afc
+   0xffff6b28:	ldr	w0, [x0, #28]
+   0xffff6b2c:	cbz	w0, 0xffff6b34
+   0xffff6b30:	b	0xffff6b30
+   0xffff6b34:	ldp	x19, x20, [sp]
+   0xffff6b38:	ldr	x30, [sp, #16]
+   0xffff6b3c:	add	sp, sp, #0x20
+   0xffff6b40:	b	0xffff722c
+   0xffff6b44:	mov	w0, #0x2                   	// #2
+   0xffff6b48:	ldp	x19, x20, [sp]
+   0xffff6b4c:	ldr	x30, [sp, #16]
+   0xffff6b50:	add	sp, sp, #0x20
+   0xffff6b54:	ret
+   0xffff6b58:	ldrb	w1, [x0, #56]
+   0xffff6b5c:	mov	w2, #0x1                   	// #1
+   0xffff6b60:	cmp	w1, wzr
+   0xffff6b64:	mov	w1, #0x2                   	// #2
+   0xffff6b68:	strb	w2, [x0, #57]
+   0xffff6b6c:	csinc	w1, w1, wzr, ne	// ne = any
+   0xffff6b70:	b	0xffff7680
+   0xffff6b74:	sub	sp, sp, #0x30
+   0xffff6b78:	stp	x19, x20, [sp]
+   0xffff6b7c:	stp	x21, x22, [sp, #16]
+   0xffff6b80:	stp	x23, x30, [sp, #32]
+   0xffff6b84:	mov	x19, x0
+   0xffff6b88:	ldrb	w0, [x1, #1]
+   0xffff6b8c:	ldrh	w2, [x1, #2]
+   0xffff6b90:	cmp	w0, #0x8
+   0xffff6b94:	ldrh	w21, [x1, #6]
+   0xffff6b98:	b.eq	0xffff6d20  // b.none
+   0xffff6b9c:	cmp	w0, #0x9
+   0xffff6ba0:	b.eq	0xffff6d00  // b.none
+   0xffff6ba4:	cmp	w0, #0x6
+   0xffff6ba8:	b.ne	0xffff6d4c  // b.any
+   0xffff6bac:	ldrb	w0, [x1]
+   0xffff6bb0:	cmp	w0, #0x80
+   0xffff6bb4:	b.ne	0xffff6d4c  // b.any
+(gdb) x/40i 0xffff0000
+   0xffff0000:	mov	x0, xzr
+   0xffff0004:	mov	x1, xzr
+   0xffff0008:	mov	x2, xzr
+   0xffff000c:	mov	x3, xzr
+   0xffff0010:	mov	x4, xzr
+   0xffff0014:	mov	x5, xzr
+   0xffff0018:	mov	x6, xzr
+   0xffff001c:	mov	x7, xzr
+   0xffff0020:	mov	x8, xzr
+   0xffff0024:	mov	x9, xzr
+   0xffff0028:	mov	x10, xzr
+   0xffff002c:	mov	x11, xzr
+   0xffff0030:	mov	x12, xzr
+   0xffff0034:	mov	x13, xzr
+   0xffff0038:	mov	x14, xzr
+   0xffff003c:	mov	x15, xzr
+   0xffff0040:	mov	x16, xzr
+   0xffff0044:	mov	x17, xzr
+   0xffff0048:	mov	x18, xzr
+   0xffff004c:	mov	x19, xzr
+   0xffff0050:	mov	x20, xzr
+   0xffff0054:	mov	x21, xzr
+   0xffff0058:	mov	x22, xzr
+   0xffff005c:	mov	x23, xzr
+   0xffff0060:	mov	x24, xzr
+   0xffff0064:	mov	x25, xzr
+   0xffff0068:	mov	x26, xzr
+   0xffff006c:	mov	x27, xzr
+   0xffff0070:	mov	x28, xzr
+   0xffff0074:	mov	x29, xzr
+   0xffff0078:	mov	x30, xzr
+   0xffff007c:	ldr	x0, 0xffff0250
+   0xffff0080:	br	x0
+   0xffff0084:	mrs	x0, sctlr_el3
+   0xffff0088:	and	x0, x0, #0xfffffffffdffffff
+   0xffff008c:	msr	sctlr_el3, x0
+   0xffff0090:	isb
+   0xffff0094:	mov	x1, #0x0                   	// #0
+   0xffff0098:	mov	x1, #0x228                 	// #552
+   0xffff009c:	movk	x1, #0xff80, lsl #16
+
