@@ -5,11 +5,11 @@
 Current research primarily focuses on:
 
 * SM1 (S905X3) (X96 Max Plus, Board Q5x3_141 V3.1 19351)
-    Most X96 Max have exposed jtag pinout on board.
+    Most X96 Max boards provide accessible JTAG test points on the PCB.
 * GXL (S905W / S905X)
-    Some board have exposed jtag pin, on some board must use sdcard->jtag pinout.
+    Depending on the board revision, JTAG is available either through PCB test points or the SD-card connector.
 * SC2 (S905x4) (A95 F4)
-    Used sdcard->jtag pinout.
+    JTAG is routed through the SD-card connector
     
 ## JTAG Pinout
 
