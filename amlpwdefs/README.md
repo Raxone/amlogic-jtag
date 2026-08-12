@@ -1,4 +1,4 @@
-# Amlogic aml_pwdefs Hash Generator
+# Amlogic amlpwdefs Hash Generator
 
 Python implementation of the Amlogic `amlpwdefs` password hashing algorithm.
 
